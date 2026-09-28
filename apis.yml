@@ -1,23 +1,76 @@
 aid: biotia
+
 name: Biotia
-description: 'Biotia is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://biotia.io/brand/biotia_open_graph_social_preview.jpg
+
+description: 'Biotia is a health‑tech company focused on infectious disease diagnostics. It offers at‑home diagnostic tests and pathogen genomics software for patients, providers, and health systems, aiming to remove guesswork from infectious disease detection and treatment. The platform includes the Biotia‑ID urine test detecting 44+ urogenital pathogens and an antimicrobial resistance panel, as well as a suite of software tools for clinical decision support and research collaborations.'
+
 url: https://raw.githubusercontent.com/api-evangelist/biotia/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
+- HealthTech
+- Diagnostics
+- InfectiousDiseases
+- Biotech
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/biotia-hosts.yml
+- type: Vendors
+  url: vendors/biotia-vendors.yml
+- type: Newsroom
+  url: https://biotia.io/news
+- type: DeveloperPortal
+  url: https://portal.biotia.io/
+- type: DomainSecurity
+  url: security/biotia-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/biotia
+  url: https://biotia.io
+- type: Documentation
+  url: https://biotia.io/about
+- type: Contact
+  url: https://biotia.io/contact
+- type: Blog
+  url: https://biotia.io/blog
+- type: PrivacyPolicy
+  url: https://biotia.io/privacy-policy
+- type: TermsOfService
+  url: https://biotia.io/user-agreement
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: "The provider's documentation at https://portal.biotia.io/ contains no machine‑readable OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL specifications."
+  evidence:
+    - url: https://portal.biotia.io/
+      status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

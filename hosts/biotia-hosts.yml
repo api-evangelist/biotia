@@ -1,0 +1,60 @@
+generated: '2026-09-28'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 3
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - portal
+  - website
+hosts:
+- host: api.biotia.io
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: biotia.io
+  role: api
+  relation: own
+- host: biotia.io
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Newsroom
+  - Website
+  - Documentation
+  - Contact
+  - Blog
+  - PrivacyPolicy
+  - TermsOfService
+  serves:
+  - docs
+  - hosting
+  vendor: vercel
+  registrable_domain: biotia.io
+  role: website
+  relation: own
+- host: portal.biotia.io
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - DeveloperPortal
+  serves:
+  - docs
+  registrable_domain: biotia.io
+  role: portal
+  relation: own
